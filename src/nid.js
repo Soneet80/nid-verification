@@ -4,13 +4,13 @@ const configs = require('../configs/configs');
 const verificationEndPoint = 'end_point';
 const subscriptionKey = configs.subscriptionKey;
 
-async function verify({ nidNumber, fullName, dob }) {
+async function verify({ 4611570088, আঃ মন্নান, dob }) {
   let response = await request({
     method: 'POST',
     qs: {
-      national_id: nidNumber,
+      national_id: 4611570088,
       person_dob: dob,
-      person_fullname: fullName
+      person_fullname: আঃ মন্নান
     },
     url: verificationEndPoint,
     headers: {
@@ -26,10 +26,10 @@ async function verify({ nidNumber, fullName, dob }) {
   }
 
   if (response.passKyc && (response.passKyc === 'true' || response.passKyc === 'yes')) {
-    return { nid: nidNumber, valid: true };
+    return { nid: 4611570088, valid: true };
   }
 
-  return { nid: nidNumber, valid: false };
+  return { nid: 4611570088, valid: false };
 }
 
 module.exports = {
